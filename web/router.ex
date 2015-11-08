@@ -14,9 +14,10 @@ defmodule Inspire.Router do
   end
 
   scope "/", Inspire do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", QuoteController, :index
+    resources "/quotes", QuoteController
   end
 
   # Other scopes may use custom stacks.

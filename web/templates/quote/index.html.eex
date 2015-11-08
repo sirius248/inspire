@@ -1,0 +1,14 @@
+<h2>Quotes</h2>
+
+<table class="table">
+  <thead>
+    <td><b>Content</b></td>
+    <td><b>Author</b></td>
+  </thead>
+  <%= for quote <- @quotes do %>
+    <tr>
+      <td><%= quote.content %></td>
+      <td><%= quote.author %></td>
+    </tr>
+  <% end %>
+</table>
