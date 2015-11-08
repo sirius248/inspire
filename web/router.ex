@@ -17,7 +17,7 @@ defmodule Inspire.Router do
     pipe_through :browser
 
     get "/", QuoteController, :index
-    resources "/quotes", QuoteController
+    resources "/quotes", QuoteController, only: [:index, :new, :create]
   end
 
   # Other scopes may use custom stacks.

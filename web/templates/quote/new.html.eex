@@ -1,0 +1,13 @@
+<h1>New Quote</h1>
+
+<%= form_for @changeset, quote_path(@conn, :create), fn f -> %>
+  <div class="form-group">
+    <%= text_input f, :content, placeholder: "Content", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= text_input f, :author, placeholder: "Author", class: "form-control" %>
+  </div>
+
+  <%= submit "Create Quote", class: "btn btn-primary" %>
+<% end %>
